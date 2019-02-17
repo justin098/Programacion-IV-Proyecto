@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmCalcu.aspx" />
+    <Content Include="frmPrueba.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -148,6 +150,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCalcu.aspx.cs">
+      <DependentUpon>frmCalcu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCalcu.aspx.designer.cs">
+      <DependentUpon>frmCalcu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmCalculadora.aspx.cs">
       <DependentUpon>frmCalculadora.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,6 +191,13 @@
     </Compile>
     <Compile Include="frmPalindromos.aspx.designer.cs">
       <DependentUpon>frmPalindromos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrueba.aspx.cs">
+      <DependentUpon>frmPrueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPrueba.aspx.designer.cs">
+      <DependentUpon>frmPrueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

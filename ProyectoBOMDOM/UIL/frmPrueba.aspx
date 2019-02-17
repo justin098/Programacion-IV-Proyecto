@@ -1,130 +1,99 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmCalculadora.aspx.cs" Inherits="UIL.frmCalculador" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmPrueba.aspx.cs" Inherits="UIL.frmPrueba" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
-    <script>
-        function InsertarNumero(Valor) {
-            if (Valor == '.') {
-                var Cadena = document.getElementById("txtValores");
-                var resultado = false;
-                //alert(resultado);
-                for (var i = 0; i < Cadena.value.length; i++) {
-                    //alert(Cadena.value.length + " Tamaño de la cadena");
-                    var caracter = Cadena.value.charAt(i);
-                    //alert(caracter + " <- Caracter | " + i + " <- Posición");
-                    if (caracter == '.') {
-                        resultado = true;
-                        break;
-                    }
-                }
-                //alert(resultado);
-                if (resultado != true) {
-                    if (Cadena.value.length == 0) {
-                        Cadena.value += "0" + Valor;
-                    } else {
-                        Cadena.value += Valor.trim();
-                    }
-                }
-            } else {
-                var inputNombre = document.getElementById("txtValores");
 
-                if (inputNombre.value.charAt(0) == "0" && inputNombre.value.charAt(1) == "") {
-                    inputNombre.value = Valor.trim();
-                } else {
-                    inputNombre.value += Valor.trim();
-                }
-            }
-        }
-        function InsertarEjecucion(Ejecucion) {
-            var inputValor = document.getElementById("txtValores");
-            inputValor.value = inputValor.value.replace(/^0+/, '');
-            inputValor.value = inputValor.value.replace(/\s/g, '');
 
-            var regex = /^[0-9.]+$/;
-            if (regex.test(inputValor.value)) {
-                if (inputValor.value.length != 0) {
-                    var inputEjecucion = document.getElementById("txtEjecuciones");
-                    if (inputEjecucion.value.indexOf('=') != -1) {
-                        inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
-                    } else {
-                        inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
-                    }
-                    inputValor.value = '0';
-                }
-            } else {
-                inputValor.value = '0';
-            }
-        }
-    </script>    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
-    <script>
-        function InsertarNumero(Valor) {
-            if (Valor == '.') {
-                var Cadena = document.getElementById("txtValores");
-                var resultado = false;
-                //alert(resultado);
-                for (var i = 0; i < Cadena.value.length; i++) {
-                    //alert(Cadena.value.length + " Tamaño de la cadena");
-                    var caracter = Cadena.value.charAt(i);
-                    //alert(caracter + " <- Caracter | " + i + " <- Posición");
-                    if (caracter == '.') {
-                        resultado = true;
-                        break;
-                    }
-                }
-                //alert(resultado);
-                if (resultado != true) {
-                    if (Cadena.value.length == 0) {
-                        Cadena.value += "0" + Valor;
-                    } else {
-                        Cadena.value += Valor.trim();
-                    }
-                }
-            } else {
-                var inputNombre = document.getElementById("txtValores");
-
-                if (inputNombre.value.charAt(0) == "0" && inputNombre.value.charAt(1) == "") {
-                    inputNombre.value = Valor.trim();
-                } else {
-                    inputNombre.value += Valor.trim();
-                }
-            }
-        }
-        function InsertarEjecucion(Ejecucion) {
-            var inputValor = document.getElementById("txtValores");
-            inputValor.value = inputValor.value.replace(/^0+/, '');
-            inputValor.value = inputValor.value.replace(/\s/g, '');
-
-            var regex = /^[0-9.]+$/;
-            if (regex.test(inputValor.value)) {
-                if (inputValor.value.length != 0) {
-                    var inputEjecucion = document.getElementById("txtEjecuciones");
-                    if (inputEjecucion.value.indexOf('=') != -1) {
-                        inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
-                    } else {
-                        inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
-                    }
-                    inputValor.value = '0';
-                }
-            } else {
-                inputValor.value = '0';
-            }
-        }
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" name="calculator" runat="server">
+
+    <script>
+        function InsertarNumero(Valor) {
+
+            if (Valor == '.') {
+                var Cadena = document.getElementById("txtValores");
+                var resultado = false;
+                //alert(resultado);
+                for (var i = 0; i < Cadena.value.length; i++) {
+                    //alert(Cadena.value.length + " Tamaño de la cadena");
+                    var caracter = Cadena.value.charAt(i);
+                    //alert(caracter + " <- Caracter | " + i + " <- Posición");
+                    if (caracter == '.') {
+                        resultado = true;
+                        break;
+                    }
+                }
+                alert(resultado);
+                if (resultado != true) {
+                    if (Cadena.value.length == 0) {
+                        Cadena.value += "0" + Valor;
+                    } else {
+                        Cadena.value += Valor.trim();
+                        document.getElementById("txtValores").innerHTML = Cadena.value;
+                    }
+                }
+            } else
+                alert("else");
+            var inputNombre = document.getElementById("txtValores");
+            alert(Valor);
+            alert(inputNombre + "nfhjsd");
+            var porId = document.getElementById("pruebatxt").textContent;
+            alert(Valor + "de prueba");
+            document.getElementById("txtValores").innerHTML = Valor;
+            alert(porId);
+            if (inputNombre.value.charAt(0) == "0" && inputNombre.value.charAt(1) == "") {
+                alert("if");
+                inputNombre.value = Valor.trim();
+                document.getElementById("txtValores").innerHTML = Valor.value;
+            } else {
+                alert("else");
+                inputNombre.value += Valor.trim();
+                document.getElementById("txtValores").innerHTML += Valor.value;
+            }
+        }
+
+
+
+        function InsertarEjecucion(Ejecucion) {
+            var inputValor = document.getElementById("txtValores");
+            inputValor.value = inputValor.value.replace(/^0+/, '');
+            inputValor.value = inputValor.value.replace(/\s/g, '');
+
+            var regex = /^[0-9.]+$/;
+            if (regex.test(inputValor.value)) {
+                if (inputValor.value.length != 0) {
+                    var inputEjecucion = document.getElementById("txtEjecuciones");
+                    if (inputEjecucion.value.indexOf('=') != -1) {
+                        inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
+                    } else {
+                        inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
+                    }
+                    inputValor.value = '0';
+                }
+            } else {
+                inputValor.value = '0';
+            }
+            return true;
+        }
+
+        function ValidacionBoton() {
+            alert("HOLA");
+            return true;
+        }
+    </script>
+
+    <form id="form1Prueba" name="calculator" runat="server">
         <h3>Calculadora</h3>
         <p>Haz algun calculo para ver el resultado.</p>
         <input type="text" runat="server" id="txtEjecuciones" readonly="" class="CampoTexto" value="" style="width: 335px" />
         <br />
+        <asp:TextBox runat="server" ID="pruebatxt" Width="335px" />
         <input type="text" runat="server" id="txtValores" class="CampoTexto" value="" style="width: 335px" />
         <br />
-        <asp:RegularExpressionValidator ID="regexpNumeros" runat="server" ErrorMessage="**No se permiten letras" ControlToValidate="txtValores" ValidationExpression="\d*\.?\d*" ForeColor="Red"></asp:RegularExpressionValidator>
-        <asp:RequiredFieldValidator ID="reqNumeros" runat="server" ControlToValidate="txtValores" ErrorMessage="Debe completar el campo" ForeColor="Red"></asp:RequiredFieldValidator>
+        <%--<asp:RegularExpressionValidator ID="regexpNumeros" runat="server" ErrorMessage="**No se permiten letras" ControlToValidate="txtValores" ValidationExpression="\d*\.?\d*" ForeColor="Red"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="reqNumeros" runat="server" ControlToValidate="txtValores" ErrorMessage="Debe completar el campo" ForeColor="Red"></asp:RequiredFieldValidator>--%>
         <br />
         <asp:Label Text="text" runat="server" Visible="false" ID="lblError" ForeColor="Red" />
         <br />
@@ -147,11 +116,10 @@
         <asp:Button Text="C" CssClass="Botones" ID="btnLimpiar" runat="server" UseSubmitBehavior="False" />
         <input type="button" class="Botones" id="btnDivision" value="/" onclick="InsertarEjecucion('/');" />
         <input type="button" class="PuntoIgual" id="btnComa" value="." onclick="InsertarNumero('.');" />
+        <asp:Button Text="text" OnClientClick="ValidacionBoton();" runat="server" />
         <asp:Button ID="bntIgualP" runat="server" Text="=" class="PuntoIgual" />
         <br />
-        
+
     </form>
-
 </asp:Content>
-
 

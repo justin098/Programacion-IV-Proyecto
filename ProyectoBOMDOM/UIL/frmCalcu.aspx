@@ -1,65 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmCalculadora.aspx.cs" Inherits="UIL.frmCalculador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmCalcu.aspx.cs" Inherits="UIL.frmCalcu" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
-    <script>
-        function InsertarNumero(Valor) {
-            if (Valor == '.') {
-                var Cadena = document.getElementById("txtValores");
-                var resultado = false;
-                //alert(resultado);
-                for (var i = 0; i < Cadena.value.length; i++) {
-                    //alert(Cadena.value.length + " Tamaño de la cadena");
-                    var caracter = Cadena.value.charAt(i);
-                    //alert(caracter + " <- Caracter | " + i + " <- Posición");
-                    if (caracter == '.') {
-                        resultado = true;
-                        break;
-                    }
-                }
-                //alert(resultado);
-                if (resultado != true) {
-                    if (Cadena.value.length == 0) {
-                        Cadena.value += "0" + Valor;
-                    } else {
-                        Cadena.value += Valor.trim();
-                    }
-                }
-            } else {
-                var inputNombre = document.getElementById("txtValores");
-
-                if (inputNombre.value.charAt(0) == "0" && inputNombre.value.charAt(1) == "") {
-                    inputNombre.value = Valor.trim();
-                } else {
-                    inputNombre.value += Valor.trim();
-                }
-            }
-        }
-        function InsertarEjecucion(Ejecucion) {
-            var inputValor = document.getElementById("txtValores");
-            inputValor.value = inputValor.value.replace(/^0+/, '');
-            inputValor.value = inputValor.value.replace(/\s/g, '');
-
-            var regex = /^[0-9.]+$/;
-            if (regex.test(inputValor.value)) {
-                if (inputValor.value.length != 0) {
-                    var inputEjecucion = document.getElementById("txtEjecuciones");
-                    if (inputEjecucion.value.indexOf('=') != -1) {
-                        inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
-                    } else {
-                        inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
-                    }
-                    inputValor.value = '0';
-                }
-            } else {
-                inputValor.value = '0';
-            }
-        }
-    </script>    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
+    <link rel="stylesheet" href="Estilos/Bootstrap/bootstrap.min.css" />
+    <script src="Estilos/Bootstrap/jquery.min.js"></script>
+    <script src="Estilos/Bootstrap/bootstrap.min.js"></script>
     <script>
         function InsertarNumero(Valor) {
             if (Valor == '.') {
@@ -114,8 +64,33 @@
             }
         }
     </script>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+</head>
+<body>
+
+    <nav class="navbar" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Aplicación B & D</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="frmCalculadora.aspx">Calculadora</a></li>
+                    <li class="active"><a href="frmPalindromos.aspx">Palíndromos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <form id="form1" name="calculator" runat="server">
         <h3>Calculadora</h3>
         <p>Haz algun calculo para ver el resultado.</p>
@@ -149,9 +124,7 @@
         <input type="button" class="PuntoIgual" id="btnComa" value="." onclick="InsertarNumero('.');" />
         <asp:Button ID="bntIgualP" runat="server" Text="=" class="PuntoIgual" />
         <br />
-        
+
     </form>
-
-</asp:Content>
-
-
+</body>
+</html>
