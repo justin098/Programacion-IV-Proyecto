@@ -1,0 +1,78 @@
+﻿form {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: solid 1px #c2c2c2;
+    padding-bottom: 10px;
+    margin: auto;
+    background: #fafafa;
+    opacity:0.8;
+}
+
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background: url(Imagenes/ventana.png) no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+.CampoTexto {
+    width: 75%;
+    padding: 16px 32px;
+    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid silver;
+    border-radius: 1px;
+    text-align: left;
+    color: #333;
+    background: #ccc;
+    border: 0px solid #000000;
+}
+
+.boton:hover {
+    opacity: 0.50;
+    -moz-opacity: .50;
+    filter: alpha (opacity=50);
+}
+
+.boton a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px 5px 0;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #333;
+}
+
+.Botones {
+    background-color: #E5B400;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 21%;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    /*border-radius: 135px 135px 135px 135px;
+    -moz-border-radius: 135px 135px 135px 135px;
+    -webkit-border-radius: 135px 135px 135px 135px;
+    border: 0px solid #000000;*/
+}
+
+.PuntoIgual {
+    background-color: #E5B400;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 16px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    /* min-width: 18%;*/
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}

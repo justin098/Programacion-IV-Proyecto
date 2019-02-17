@@ -106,12 +106,50 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Estilos\cssCalculadora.css" />
+    <Content Include="Estilos\cssLogin.css" />
+    <Content Include="Estilos\cssPalindromos.css" />
+    <Content Include="frmCalculadora.aspx" />
+    <Content Include="frmInicio.aspx" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="frmPalindromos.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Javascript\jsCalculadora.js" />
+    <Content Include="Javascript\jsLogin.js" />
+    <Content Include="Javascript\jsPalindromos.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCalculadora.aspx.cs">
+      <DependentUpon>frmCalculadora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCalculadora.aspx.designer.cs">
+      <DependentUpon>frmCalculadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.aspx.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmInicio.aspx.designer.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalindromos.aspx.cs">
+      <DependentUpon>frmPalindromos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPalindromos.aspx.designer.cs">
+      <DependentUpon>frmPalindromos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
