@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{B6463531-7A18-43D5-A98C-2C00628B66EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{CD3A5125-9864-498B-BECD-97741B962C46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CBLL", "CBLL", "{5089D211-168F-4FC3-AEB2-64EAD414D2E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CDAL", "CDAL", "{E5843096-2F1E-4834-B87E-2E4FE8980CCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{4F94DE12-FEB9-4322-A8AF-682A00E7AED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIL", "UIL\UIL.csproj", "{EDF35B84-DB38-4588-86D8-B2DC0C4B3CE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6463531-7A18-43D5-A98C-2C00628B66EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6463531-7A18-43D5-A98C-2C00628B66EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6463531-7A18-43D5-A98C-2C00628B66EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6463531-7A18-43D5-A98C-2C00628B66EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3A5125-9864-498B-BECD-97741B962C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3A5125-9864-498B-BECD-97741B962C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3A5125-9864-498B-BECD-97741B962C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3A5125-9864-498B-BECD-97741B962C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF35B84-DB38-4588-86D8-B2DC0C4B3CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF35B84-DB38-4588-86D8-B2DC0C4B3CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF35B84-DB38-4588-86D8-B2DC0C4B3CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF35B84-DB38-4588-86D8-B2DC0C4B3CE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6463531-7A18-43D5-A98C-2C00628B66EF} = {5089D211-168F-4FC3-AEB2-64EAD414D2E5}
+		{CD3A5125-9864-498B-BECD-97741B962C46} = {E5843096-2F1E-4834-B87E-2E4FE8980CCC}
+		{EDF35B84-DB38-4588-86D8-B2DC0C4B3CE2} = {4F94DE12-FEB9-4322-A8AF-682A00E7AED6}
+	EndGlobalSection
+EndGlobal
