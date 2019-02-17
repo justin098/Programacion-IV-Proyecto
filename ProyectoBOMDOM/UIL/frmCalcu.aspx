@@ -63,6 +63,9 @@
                 inputValor.value = '0';
             }
         }
+        function newDoc() {
+            window.location.assign("frmCalcu.aspx")
+        }
     </script>
 
 </head>
@@ -80,7 +83,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="frmCalculadora.aspx">Calculadora</a></li>
+                    <li class="active"><a href="#" onclick="newDoc()">Calculadora</a></li>
                     <li class="active"><a href="frmPalindromos.aspx">Palíndromos</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
