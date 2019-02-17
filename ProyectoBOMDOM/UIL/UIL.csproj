@@ -96,6 +96,8 @@
   <ItemGroup>
     <Content Include="frmCalcu.aspx" />
     <Content Include="frmPrueba.aspx" />
+    <Content Include="Imagenes\ventana.png" />
+    <Content Include="Javascript\jsMaster.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

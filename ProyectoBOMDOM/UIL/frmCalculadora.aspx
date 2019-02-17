@@ -2,120 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
     <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
-    <script>
-        function InsertarNumero(Valor) {
-            if (Valor == '.') {
-                var Cadena = document.getElementById("txtValores");
-                var resultado = false;
-                //alert(resultado);
-                for (var i = 0; i < Cadena.value.length; i++) {
-                    //alert(Cadena.value.length + " Tamaño de la cadena");
-                    var caracter = Cadena.value.charAt(i);
-                    //alert(caracter + " <- Caracter | " + i + " <- Posición");
-                    if (caracter == '.') {
-                        resultado = true;
-                        break;
-                    }
-                }
-                //alert(resultado);
-                if (resultado != true) {
-                    if (Cadena.value.length == 0) {
-                        Cadena.value += "0" + Valor;
-                    } else {
-                        Cadena.value += Valor.trim();
-                    }
-                }
-            } else {
-                var inputNombre = document.getElementById("txtValores");
-
-                if (inputNombre.value.charAt(0) == "0" && inputNombre.value.charAt(1) == "") {
-                    inputNombre.value = Valor.trim();
-                } else {
-                    inputNombre.value += Valor.trim();
-                }
-            }
-        }
-        function InsertarEjecucion(Ejecucion) {
-            var inputValor = document.getElementById("txtValores");
-            inputValor.value = inputValor.value.replace(/^0+/, '');
-            inputValor.value = inputValor.value.replace(/\s/g, '');
-
-            var regex = /^[0-9.]+$/;
-            if (regex.test(inputValor.value)) {
-                if (inputValor.value.length != 0) {
-                    var inputEjecucion = document.getElementById("txtEjecuciones");
-                    if (inputEjecucion.value.indexOf('=') != -1) {
-                        inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
-                    } else {
-                        inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
-                    }
-                    inputValor.value = '0';
-                }
-            } else {
-                inputValor.value = '0';
-            }
-        }
-    </script>    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
-    <script>
-        function InsertarNumero(Valor) {
-            if (Valor == '.') {
-                var Cadena = document.getElementById("txtValores");
-                var resultado = false;
-                //alert(resultado);
-                for (var i = 0; i < Cadena.value.length; i++) {
-                    //alert(Cadena.value.length + " Tamaño de la cadena");
-                    var caracter = Cadena.value.charAt(i);
-                    //alert(caracter + " <- Caracter | " + i + " <- Posición");
-                    if (caracter == '.') {
-                        resultado = true;
-                        break;
-                    }
-                }
-                //alert(resultado);
-                if (resultado != true) {
-                    if (Cadena.value.length == 0) {
-                        Cadena.value += "0" + Valor;
-                    } else {
-                        Cadena.value += Valor.trim();
-                    }
-                }
-            } else {
-                var inputNombre = document.getElementById("txtValores");
-
-                if (inputNombre.value.charAt(0) == "0" && inputNombre.value.charAt(1) == "") {
-                    inputNombre.value = Valor.trim();
-                } else {
-                    inputNombre.value += Valor.trim();
-                }
-            }
-        }
-        function InsertarEjecucion(Ejecucion) {
-            var inputValor = document.getElementById("txtValores");
-            inputValor.value = inputValor.value.replace(/^0+/, '');
-            inputValor.value = inputValor.value.replace(/\s/g, '');
-
-            var regex = /^[0-9.]+$/;
-            if (regex.test(inputValor.value)) {
-                if (inputValor.value.length != 0) {
-                    var inputEjecucion = document.getElementById("txtEjecuciones");
-                    if (inputEjecucion.value.indexOf('=') != -1) {
-                        inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
-                    } else {
-                        inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
-                    }
-                    inputValor.value = '0';
-                }
-            } else {
-                inputValor.value = '0';
-            }
-        }
-    </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     <form id="form1" name="calculator" runat="server">
         <h3>Calculadora</h3>
         <p>Haz algun calculo para ver el resultado.</p>
@@ -149,9 +41,9 @@
         <input type="button" class="PuntoIgual" id="btnComa" value="." onclick="InsertarNumero('.');" />
         <asp:Button ID="bntIgualP" runat="server" Text="=" class="PuntoIgual" />
         <br />
-        
-    </form>
 
+    </form>
+    <script type="text/javascript" src="Javascript/jsCalculadora.js"></script>
 </asp:Content>
 
 

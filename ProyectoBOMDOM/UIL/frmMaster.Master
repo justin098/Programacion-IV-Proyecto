@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="Estilos/Bootstrap/bootstrap.min.css" />
     <script src="Estilos/Bootstrap/jquery.min.js"></script>
     <script src="Estilos/Bootstrap/bootstrap.min.js"></script>
-    <title></title>
+    <script type="text/javascript" src="Javascript/jsMaster.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
     <nav class="navbar" style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -26,30 +27,34 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="frmCalcu.aspx">Calculadora</a></li>
-                    <li class="active"><a href="frmPalindromos.aspx">Palíndromos</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOM <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Opc1</a></li>
-                            <li><a href="#">Opc2</a></li>
-                        </ul>
-                    </li>
+                    <li class="active"><a href="#" onclick="AbrirCalculadora()">Calculadora</a></li>
+                    <li class="active"><a href="#" onclick="AbrirPalindromos()">Palíndromos</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">BOM <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Opc1</a></li>
-                            <li><a href="#">Opc2</a></li>
+                            <li><a href="#" onclick="ZoomPlus()">Zoom +</a></li>
+                            <li><a href="#" onclick="ZoomSub()">Zoom -</a></li>
+                            <li><a href="#" onclick="ImprimirPantalla()">Imprimir pantalla</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOM <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="Cambio1()">Cambio de imagen libros</a></li>
+                            <li><a href="#" onclick="Cambio2()">Cambio de imagen calculadora</a></li>
+                            <li><a href="#" onclick="AbrirURL()">Abrir URL</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                    <li><a id="lblHora"></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <img id="fondo" src="Imagenes/ventana.png" alt="background image" />
     <asp:ContentPlaceHolder ID="cphBody" runat="server">
     </asp:ContentPlaceHolder>
 

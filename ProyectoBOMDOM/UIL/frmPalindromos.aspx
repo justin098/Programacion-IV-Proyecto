@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="Estilos/cssPalindromos.css" />
     <link rel="shortcut icon" type="image/x-icon" href="Imagenes/Libros.png" />
-    <title>Comprobación Palíndromos</title>
+    <title>Palíndromos</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server"><!--debe ponerse el ContentPlaceHolder_Nombreetiqueta para que funcione en el JS-->
     <form id="form1" name="palindromos" class="formulario" runat="server">
@@ -17,8 +17,6 @@
         <br />
         <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClientClick="return ValidacionBoton()" OnClick="btnComprobar_Click" />
         <br />
-        <asp:Button Text="Zoom +" OnClientClick="return ZoomPlus()" runat="server" />
-        <asp:Button Text="Zoom +" OnClientClick="return ZoomSub()" runat="server" />
     </form>
     <script type="text/javascript" src="Javascript/jsPalindromos.js"></script>
 </asp:Content>
