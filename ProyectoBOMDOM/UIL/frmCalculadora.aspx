@@ -1,13 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmCalculadora.aspx.cs" Inherits="UIL.frmCalculadora" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmCalculadora.aspx.cs" Inherits="UIL.frmCalculador" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="Estilos/Calculadora.css" />
     <title></title>
-</head>
-<body>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" name="calculator" runat="server">
         <h3>Calculadora</h3>
         <p>Haz algun calculo para ver el resultado.</p>
@@ -36,13 +33,14 @@
         <input type="button" class="Botones" id="btnMultiplicacion" value="*" onclick="InsertarEjecucion('*');" />
         <br />
         <input type="button" class="Botones" id="btnCero" value="0" onclick="InsertarNumero('0');" />
-        <asp:Button Text="C" CssClass="Botones" ID="btnLimpiar" runat="server"  UseSubmitBehavior="False" />
+        <asp:Button Text="C" CssClass="Botones" ID="btnLimpiar" runat="server" UseSubmitBehavior="False" />
         <input type="button" class="Botones" id="btnDivision" value="/" onclick="InsertarEjecucion('/');" />
         <input type="button" class="PuntoIgual" id="btnComa" value="." onclick="InsertarNumero('.');" />
         <asp:Button ID="bntIgualP" runat="server" Text="=" class="PuntoIgual" />
         <br />
-
     </form>
-</body>
-<script type="text/javascript" src="Javascript/jsCalculadora.js"></script>
-</html>
+    <script type="text/javascript" src="Javascript/jsPalindromos.js"></script>
+
+</asp:Content>
+
+

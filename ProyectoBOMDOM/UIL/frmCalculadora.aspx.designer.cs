@@ -10,7 +10,7 @@
 namespace UIL {
     
     
-    public partial class frmCalculadora {
+    public partial class frmCalculador {
         
         /// <summary>
         /// Control form1.

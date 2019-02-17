@@ -23,7 +23,7 @@ namespace UIL
             try
             {
                 Session["UsuarioLogueado"] = txtUsuario.Value.Trim(); ;
-                Response.Redirect("frmCalculadora.aspx");
+                Response.Redirect("frmInicio.aspx");
             }
             catch (Exception ex)
             {

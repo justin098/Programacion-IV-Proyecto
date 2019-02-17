@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace UIL
 {
-    public partial class frmCalculador : System.Web.UI.Page
+    public partial class frmMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

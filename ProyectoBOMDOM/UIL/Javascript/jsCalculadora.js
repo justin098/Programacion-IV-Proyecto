@@ -41,10 +41,12 @@ function InsertarEjecucion(Ejecucion) {
             var inputEjecucion = document.getElementById("txtEjecuciones");
             if (inputEjecucion.value.indexOf('=') != -1) {
                 inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
+                alert(inputEjecucion.value);
             } else {
                 inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
             }
             inputValor.value = '0';
+            alert(inputValor.value);
         }
     } else {
         inputValor.value = '0';

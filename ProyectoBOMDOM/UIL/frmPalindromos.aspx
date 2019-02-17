@@ -1,14 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmPalindromos.aspx.cs" Inherits="UIL.frmPalindromos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMaster.Master" AutoEventWireup="true" CodeBehind="frmPalindromos.aspx.cs" Inherits="UIL.frmPalindrom" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="Estilos/cssPalindromos.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="Imagenes/Libros.png" />
     <title>Comprobación Palíndromos</title>
-</head>
-<body>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" name="palindromos" class="formulario" runat="server">
         <h3>Palíndromos</h3>
         <input type="text" runat="server" id="txtValores" class="CampoTexto" value="" style="width: 335px" />
@@ -17,8 +15,9 @@
         <br />
         <asp:Label Text="text" runat="server" Visible="false" ID="lblError" ForeColor="Red" />
         <br />
-        <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClick="btnComprobar_Click" />
+        <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClientClick="return ValidacionBoton()" OnClick="btnComprobar_Click" />
         <br />
     </form>
-</body>
-</html>
+    <script type="text/javascript" src="Javascript/jsPalindromos.js"></script>
+</asp:Content>
+

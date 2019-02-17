@@ -98,6 +98,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Estilos\Bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap.css.map" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.js.map" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="frmMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,6 +117,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Estilos\Bootstrap\bootstrap.min.css" />
+    <Content Include="Estilos\Bootstrap\bootstrap.min.js" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap.css" />
+    <Content Include="Estilos\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Estilos\Bootstrap\jquery.min.js" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.js" />
+    <Content Include="Estilos\Bootstrap\js\bootstrap.min.js" />
     <Content Include="Estilos\cssCalculadora.css" />
     <Content Include="Estilos\cssLogin.css" />
     <Content Include="Estilos\cssPalindromos.css" />
@@ -114,6 +138,8 @@
     <Content Include="frmLogin.aspx" />
     <Content Include="frmPalindromos.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Fondolibros.jpg" />
+    <Content Include="Imagenes\Libros.png" />
     <Content Include="Javascript\jsCalculadora.js" />
     <Content Include="Javascript\jsLogin.js" />
     <Content Include="Javascript\jsPalindromos.js" />
@@ -142,6 +168,13 @@
     </Compile>
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaster.Master.cs">
+      <DependentUpon>frmMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMaster.Master.designer.cs">
+      <DependentUpon>frmMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="frmPalindromos.aspx.cs">
       <DependentUpon>frmPalindromos.aspx</DependentUpon>

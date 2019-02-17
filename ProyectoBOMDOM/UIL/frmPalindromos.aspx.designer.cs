@@ -10,7 +10,7 @@
 namespace UIL {
     
     
-    public partial class frmPalindromos {
+    public partial class frmPalindrom {
         
         /// <summary>
         /// Control form1.
