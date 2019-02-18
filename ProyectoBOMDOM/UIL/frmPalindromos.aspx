@@ -9,13 +9,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server"><!--debe ponerse el ContentPlaceHolder_Nombreetiqueta para que funcione en el JS-->
     <form id="form1" name="palindromos" class="formulario" runat="server">
         <h3>Palíndromos</h3>
-        <input type="text" runat="server" id="txtValores" class="CampoTexto" value="" style="width: 335px; font-size: 2rem;" />
-        <br />
-        <asp:RequiredFieldValidator ID="reqTexto" runat="server" ControlToValidate="txtValores" ErrorMessage="Debe completar el campo" ForeColor="Red" ValidationGroup="form_ejm"></asp:RequiredFieldValidator>
+        <input type="text" runat="server" id="txtValores" class="CampoTexto" onkeypress="return ValidarNumero(event)" value="" style="width: 335px; font-size: 2rem;" />
         <br />
         <asp:Label Text="text" runat="server" Visible="true" ID="lblError" ForeColor="Red" />
         <br />
-        <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClientClick="return ValidacionBoton()" OnClick="btnComprobar_Click" />
+        <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClick="btnComprobar_Click" />
         <br />
     </form>
     <script type="text/javascript" src="Javascript/jsPalindromos.js"></script>

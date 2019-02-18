@@ -6,7 +6,6 @@ function ImprimirPantalla() {
 
 function ZoomPlus() {
     var zoom = document.body.style.zoom.toString();
-    alert(zoom);
     zoom = zoom.replace('%', '');
     zoom = (parseInt(zoom) + 10) + "%";
     document.body.style.zoom = zoom.toString();
@@ -92,7 +91,6 @@ function showPosition(position) {
 
 
 function obtenerCookie(clave) {
-    alert(clave);
     var name = clave + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {

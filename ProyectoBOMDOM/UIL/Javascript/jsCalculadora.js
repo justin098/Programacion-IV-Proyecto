@@ -43,7 +43,6 @@ function InsertarEjecucion(Ejecucion) {
             var inputEjecucion = document.getElementById("cphBody_txtEjecuciones");
             if (inputEjecucion.value.indexOf('=') != -1) {
                 inputEjecucion.value = inputValor.value + " " + Ejecucion + " ";
-                alert(inputEjecucion.value);
             } else {
                 inputEjecucion.value += inputValor.value + " " + Ejecucion + " ";
             }

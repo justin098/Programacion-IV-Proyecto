@@ -31,15 +31,6 @@ namespace UIL {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtValores;
         
         /// <summary>
-        /// Control reqTexto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqTexto;
-        
-        /// <summary>
         /// Control lblError.
         /// </summary>
         /// <remarks>
