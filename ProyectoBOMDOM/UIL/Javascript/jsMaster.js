@@ -24,6 +24,9 @@ function ZoomSub() {
 function Cargar() {
     startTime();
     document.body.style.zoom = "100%";
+
+    getLocation();
+
 }
 
 function AbrirPalindromos() {
@@ -70,4 +73,18 @@ function Cambio1() {
 
 function Cambio2() {
     document.body.style.backgroundImage = "url(Imagenes/ventana.png)";
+}
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById('lblInicio').setAttribute('title',"Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    document.getElementById('lblInicio').setAttribute('title', "Latitude: " + position.coords.latitude +
+    " Longitude: " + position.coords.longitude);
 }

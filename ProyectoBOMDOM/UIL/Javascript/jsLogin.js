@@ -9,12 +9,21 @@
         return false;
     } else if (usuario == "1234" && contrasena == "admin") {
         document.getElementById("lblMensaje").style.display = "none";
+        setCookie("usuario", usuario);
         return true;
     } else {
         document.getElementById("lblMensaje").innerHTML = "Usuario / Contraseña incorrectos";
         document.getElementById("lblMensaje").style.display = "inline";
         return false;
     }
+}
+
+function setCookie(cname, cvalue) {
+    var d = new Date();
+    d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+    alert(document.cookie + expires.toString());
 }
 
 function ValidarIdUsuario(e) {

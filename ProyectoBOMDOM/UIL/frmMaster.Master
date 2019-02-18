@@ -14,7 +14,6 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-
     <nav class="navbar" style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -23,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Aplicación B & D</a>
+                <a class="navbar-brand" id="lblInicio" href="#">Aplicación B & D</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -48,7 +47,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a id="lblHora"></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Cerrar sesión</a></li>
+                    <li><a href="#" id="btnCerrarSesion"><span class="glyphicon"></span>Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
@@ -56,6 +55,7 @@
 
     <img id="fondo" src="Imagenes/ventana.png" alt="background image" />
     <asp:ContentPlaceHolder ID="cphBody" runat="server">
+  
     </asp:ContentPlaceHolder>
 
 </body>
