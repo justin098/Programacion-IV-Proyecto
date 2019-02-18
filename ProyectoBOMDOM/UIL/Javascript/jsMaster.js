@@ -27,6 +27,7 @@ function Cargar() {
 
     getLocation();
 
+    obtenerCookie("usuario");
 }
 
 function AbrirPalindromos() {
@@ -87,4 +88,25 @@ function getLocation() {
 function showPosition(position) {
     document.getElementById('lblInicio').setAttribute('title', "Latitude: " + position.coords.latitude +
     " Longitude: " + position.coords.longitude);
+}
+
+
+function obtenerCookie(clave) {
+    alert(clave);
+    var name = clave + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) {
+            //alert(c.substring(name.length, c.length));
+            document.getElementById('lblUsuario').innerHTML = c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function CerrarSesion() {
+    document.cookie = "usuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    window.location.assign("frmLogin.aspx")
 }

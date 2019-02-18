@@ -46,8 +46,9 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a id="lblUsuario"></a></li>
                     <li><a id="lblHora"></a></li>
-                    <li><a href="#" id="btnCerrarSesion"><span class="glyphicon"></span>Cerrar sesión</a></li>
+                    <li><a href="#" onclick="CerrarSesion()" id="btnCerrarSesion"><span class="glyphicon"></span>Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
