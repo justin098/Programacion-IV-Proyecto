@@ -18,7 +18,6 @@ namespace UIL
             {
                 this.Form.Attributes.Add("autocomplete", "off");
                 txtValores.Value = "";
-                lblError.Visible = false;
             }
         }
 
@@ -26,32 +25,20 @@ namespace UIL
         {
             try
             {
-                if (txtValores.Value.Length < 3)
+                lblError.ForeColor = Color.Blue;
+                BLL.BLLPalindromo.clsPalindromo objBLL = new BLL.BLLPalindromo.clsPalindromo();
+                DAL.DALPalindromo.clsPalindromo objDAL = new DAL.DALPalindromo.clsPalindromo();
+
+                objDAL.Palabra = txtValores.Value.Replace(" ", "").ToUpper();
+                if (objBLL.PalabraPalindromo(ref objDAL))
                 {
-                    lblError.ForeColor = Color.Red;
-                    lblError.Text = "Debe contener al menos 3 caracteres";
-                    lblError.Visible = true;
+                    lblError.Text = "Es palíndromo";
                 }
                 else
                 {
-
-                    lblError.Visible = false;
-                    lblError.ForeColor = Color.Blue;
-                    BLL.BLLPalindromo.clsPalindromo objBLL = new BLL.BLLPalindromo.clsPalindromo();
-                    DAL.DALPalindromo.clsPalindromo objDAL = new DAL.DALPalindromo.clsPalindromo();
-
-                    objDAL.Palabra = txtValores.Value.Replace(" ", "").ToUpper();
-                    if (objBLL.PalabraPalindromo(ref objDAL))
-                    {
-                        lblError.Text = "Es palíndromo";
-                        lblError.Visible = true;
-                    }
-                    else
-                    {
-                        lblError.Text = "No es palíndromo";
-                        lblError.Visible = true;
-                    }
+                    lblError.Text = "No es palíndromo";
                 }
+
             }
             catch (Exception ex)
             {

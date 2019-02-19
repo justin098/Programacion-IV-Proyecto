@@ -11,9 +11,9 @@
         <h3>Palíndromos</h3>
         <input type="text" runat="server" id="txtValores" class="CampoTexto" onkeypress="return ValidarNumero(event)" value="" style="width: 335px; font-size: 2rem;" />
         <br />
-        <asp:Label Text="text" runat="server" Visible="true" ID="lblError" ForeColor="Red" />
+        <asp:Label Text="" runat="server" Visible="true" ID="lblError" />
         <br />
-        <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClick="btnComprobar_Click" />
+        <asp:Button ID="btnComprobar" runat="server" Text="Comprobar" ValidationGroup="form_ejm" class="Botones" OnClientClick="return ValidacionBoton()" OnClick="btnComprobar_Click" />
         <br />
     </form>
     <script type="text/javascript" src="Javascript/jsPalindromos.js"></script>

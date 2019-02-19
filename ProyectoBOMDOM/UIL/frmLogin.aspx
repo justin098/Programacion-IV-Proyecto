@@ -16,7 +16,7 @@
         <input type="password" placeholder="Contraseña" id="txtContrasena" class="Textos" />
         <asp:Label Text="" ID="lblMensaje" ForeColor="Red" runat="server" />
         <br />
-        <asp:Button Text="Iniciar Sesión" CssClass="Boton" ID="btnIniciar" runat="server" OnClientClick="return ValidacionBoton()" OnClick="btnIniciar_Click" />
+        <asp:Button Text="Iniciar Sesión" CssClass="Boton" ID="btnIniciar" runat="server" OnClick="btnIniciar_Click" OnClientClick="return ValidacionBoton()"  />
     </form>
 </body>
 <script type="text/javascript" src="Javascript/jsLogin.js"></script>

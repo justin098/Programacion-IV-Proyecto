@@ -14,7 +14,6 @@ namespace UIL
             if (!IsPostBack)
             {
                 this.Form.Attributes.Add("autocomplete", "off");
-                Session["UsuarioLogueado"] = null;
             }
         }
 
@@ -22,7 +21,6 @@ namespace UIL
         {
             try
             {
-                Session["UsuarioLogueado"] = txtUsuario.Value.Trim(); ;
                 Response.Redirect("frmCalculadora.aspx");
             }
             catch (Exception ex)

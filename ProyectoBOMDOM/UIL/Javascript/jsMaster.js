@@ -43,7 +43,7 @@ function AbrirCalculadora() {
     if (titulopag === "Calculadora") {
         window.open("frmCalculadora.aspx", "", "fullscreen,scrollbars");
     } else {
-        window.location.assign("frmCalculadora.aspx")
+        window.location.assign("frmCalculadora.aspx");
     }
 
 }

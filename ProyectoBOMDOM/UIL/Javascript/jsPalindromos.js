@@ -24,3 +24,19 @@
         }
     }
 }
+
+
+function ValidacionBoton() {
+    var palabraIngresada = document.getElementById("cphBody_txtValores").value;
+
+    if (palabraIngresada.trim() === "" || palabraIngresada.length < 3) {
+        document.getElementById("cphBody_lblError").innerHTML = "Por favor ingresar una frase o palabra debe contener minimo 3 letras / No se admite el campo vacío";
+        document.getElementById("cphBody_lblError").style.color = "red";
+        return false;
+    } else {
+        document.getElementById("cphBody_lblError").innerHTML = "";
+        
+        return true;
+    }
+
+}
