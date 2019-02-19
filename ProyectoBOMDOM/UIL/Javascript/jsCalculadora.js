@@ -52,3 +52,25 @@ function InsertarEjecucion(Ejecucion) {
         inputValor.value = '0';
     }
 }
+
+
+function LimpiarCampos() {
+    document.getElementById("cphBody_txtEjecuciones").value = "";
+    document.getElementById("cphBody_txtValores").value = "0";
+    document.getElementById("cphBody_lblError").innerHTML = "";
+}
+
+function ValidacionIgual() {
+
+    var ejecuciones = document.getElementById("cphBody_txtEjecuciones").value;
+    var valores = document.getElementById("cphBody_txtValores").value;
+
+    if (valores.trim() === "" || ejecuciones.trim() === "") {
+        document.getElementById("cphBody_lblError").innerHTML = "**Debe realizar alguna operación";
+        return false;
+    }
+    else {
+        document.getElementById("cphBody_lblError").innerHTML = "";
+        return true;
+    }
+}

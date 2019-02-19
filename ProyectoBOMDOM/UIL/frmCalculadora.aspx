@@ -18,7 +18,7 @@
         <asp:RegularExpressionValidator ID="regexpNumeros" runat="server" ErrorMessage="**No se permiten letras" ControlToValidate="txtValores" ValidationExpression="\d*\.?\d*" ForeColor="Red"></asp:RegularExpressionValidator>
         <asp:RequiredFieldValidator ID="reqNumeros" runat="server" ControlToValidate="txtValores" ErrorMessage="Debe completar el campo" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
-        <asp:Label Text="text" runat="server" Visible="false" ID="lblError" ForeColor="Red" />
+        <asp:Label Text="" runat="server" ID="lblError" ForeColor="Red" />
         <br />
         <input type="button" class="Botones" id="btnUno" value="1" onclick="InsertarNumero('1');" />
         <input type="button" id="btnDos" class="Botones" value="2" onclick="InsertarNumero('2');" />
@@ -36,10 +36,10 @@
         <input type="button" class="Botones" id="btnMultiplicacion" value="*" onclick="InsertarEjecucion('*');" />
         <br />
         <input type="button" class="Botones" id="btnCero" value="0" onclick="InsertarNumero('0');" />
-        <asp:Button Text="C" CssClass="Botones" ID="btnLimpiar" runat="server" UseSubmitBehavior="False" OnClick="btnLimpiar_Click" />
+        <input type="button" class="Botones" id="btnLimpiar" value="C" onclick="LimpiarCampos();" />
         <input type="button" class="Botones" id="btnDivision" value="/" onclick="InsertarEjecucion('/');" />
         <input type="button" class="PuntoIgual" id="btnComa" value="." onclick="InsertarNumero('.');" />
-        <asp:Button ID="bntIgualP" runat="server" Text="=" class="PuntoIgual" OnClick="bntIgualP_Click" />
+        <asp:Button ID="bntIgualP" runat="server" Text="=" class="PuntoIgual" OnClientClick="return ValidacionIgual()" OnClick="bntIgualP_Click" />
         <br />
 
     </form>

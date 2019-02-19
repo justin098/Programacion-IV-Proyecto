@@ -153,39 +153,15 @@ namespace UIL
             txtEjecuciones.Value += " = " + lstEjec.ElementAt(0).ToString().Replace(',', '.');
         }
 
-        protected void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                txtEjecuciones.Value = "";
-                txtValores.Value = "0";
-                lblError.Visible = false;
-            }
-            catch (Exception ex)
-            {
-
-                lblError.Text = ex.Message.ToString();
-            }
-        }
 
         protected void bntIgualP_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtValores.Value.Equals("") || txtEjecuciones.Value.Equals(""))
-                {
-                    lblError.Visible = true;
-                    lblError.Text = "**Debe realizar alguna operación";
-                }
-                else
-                {
-                    lblError.Visible = false;
-                    CalculoOperaciones();
-                }
+                CalculoOperaciones();
             }
             catch (Exception ex)
             {
-
                 lblError.Text = ex.Message.ToString();
             }
         }
