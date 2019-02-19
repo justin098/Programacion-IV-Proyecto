@@ -94,8 +94,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Imagenes\calculator.png" />
-    <Content Include="Imagenes\password.png" />
     <Content Include="Imagenes\ventana.png" />
     <Content Include="Javascript\jsMaster.js" />
     <Content Include="packages.config" />

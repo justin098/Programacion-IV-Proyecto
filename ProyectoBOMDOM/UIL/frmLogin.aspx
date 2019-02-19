@@ -7,7 +7,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inicio de sesión</title>
-    <link rel="shortcut icon" type="image/x-icon" href="Imagenes/password.png" />
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet" />
     <link href="Estilos/cssLogin.css" rel="stylesheet" type="text/css" />
 </head>
@@ -17,7 +16,7 @@
         <input type="password" placeholder="Contraseña" id="txtContrasena" class="Textos" />
         <asp:Label Text="" ID="lblMensaje" ForeColor="Red" runat="server" />
         <br />
-        <asp:Button Text="Iniciar Sesión" CssClass="Boton" ID="btnIniciar" runat="server" OnClick="btnIniciar_Click" OnClientClick="return ValidacionBoton()" />
+        <asp:Button Text="Iniciar Sesión" CssClass="Boton" ID="btnIniciar" runat="server" OnClick="btnIniciar_Click" OnClientClick="return ValidacionBoton()"  />
     </form>
 </body>
 <script type="text/javascript" src="Javascript/jsLogin.js"></script>
