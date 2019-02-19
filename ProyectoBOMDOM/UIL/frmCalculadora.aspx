@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="Imagenes/calculator.png" />
     <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="Estilos/cssCalculadora.css" />
 </asp:Content>
