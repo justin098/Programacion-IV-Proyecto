@@ -5,18 +5,10 @@ function ImprimirPantalla() {
 }
 
 function ZoomPlus() {
-    alert("prueba");
-    var zoom = 1.5;
-    alert(zoom);
-    var docViewer = getBrowser().mCurrentBrowser.markupDocumentViewer;
-    alert(docViewer);
-    docViewer.fullZoom = zoom;
-    alert(zoom);
-
-    //var zoom = document.body.style.zoom.toString();
-    //zoom = zoom.replace('%', '');
-    //zoom = (parseInt(zoom) + 10) + "%";
-    //document.body.style.zoom = zoom.toString();
+    var zoom = document.body.style.zoom.toString();
+    zoom = zoom.replace('%', '');
+    zoom = (parseInt(zoom) + 10) + "%";
+    document.body.style.zoom = zoom.toString();
     return false;
 }
 

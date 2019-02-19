@@ -31,8 +31,6 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">BOM <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" onclick="ZoomPlus()">Zoom +</a></li>
-                            <li><a href="#" onclick="ZoomSub()">Zoom -</a></li>
                             <li><a href="#" onclick="ImprimirPantalla()">Imprimir pantalla</a></li>
                         </ul>
                     </li>
@@ -42,6 +40,8 @@
                             <li><a href="#" onclick="Cambio1()">Cambio de imagen libros</a></li>
                             <li><a href="#" onclick="Cambio2()">Cambio de imagen calculadora</a></li>
                             <li><a href="#" onclick="AbrirURL()">Abrir URL</a></li>
+                            <li><a href="#" onclick="ZoomPlus()">Zoom +</a></li>
+                            <li><a href="#" onclick="ZoomSub()">Zoom -</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -56,7 +56,6 @@
 
     <img id="fondo" src="Imagenes/ventana.png" alt="background image" />
     <asp:ContentPlaceHolder ID="cphBody" runat="server">
-  
     </asp:ContentPlaceHolder>
 
 </body>
