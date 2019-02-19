@@ -9,8 +9,20 @@ namespace DAL.DALCalculadora
     public class clsCalculadora
     {
 
-        private float _PrimerNumero, _SegundoNumero, _Resultado;
-        private string _TextoCadena, _MensajeError;
+        private string _MensajeError, _Ejecuciones;
+
+        public string Ejecuciones
+        {
+            get
+            {
+                return _Ejecuciones;
+            }
+
+            set
+            {
+                _Ejecuciones = value;
+            }
+        }
 
         public string MensajeError
         {
@@ -22,58 +34,6 @@ namespace DAL.DALCalculadora
             set
             {
                 _MensajeError = value;
-            }
-        }
-
-        public float PrimerNumero
-        {
-            get
-            {
-                return _PrimerNumero;
-            }
-
-            set
-            {
-                _PrimerNumero = value;
-            }
-        }
-
-        public float Resultado
-        {
-            get
-            {
-                return _Resultado;
-            }
-
-            set
-            {
-                _Resultado = value;
-            }
-        }
-
-        public float SegundoNumero
-        {
-            get
-            {
-                return _SegundoNumero;
-            }
-
-            set
-            {
-                _SegundoNumero = value;
-            }
-        }
-
-        public string TextoCadena
-        {
-            get
-            {
-                return _TextoCadena;
-            }
-
-            set
-            {
-                _TextoCadena = value;
             }
         }
 
